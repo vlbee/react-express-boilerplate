@@ -1,0 +1,48 @@
+{
+  "name": "react-express-boilerplate",
+  "version": "1.0.0",
+  "main": "server/src/index.js",
+  "author": "vlbee",
+  "license": "ISC",
+  "keywords": [],
+  "description": "minimal React boilerplate with Express server. Includes Jest testing, PostCSS and bundling with Parcel",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start:server": "nodemon server/src/index.js",
+    "start:client": "parcel client/src/index.html",
+    "build": "parcel build client/src/index.html --public-url ./"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "dependencies": {
+    "autoprefixer": "^8.6.3",
+    "express": "^4.16.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.0.0",
+    "eslint-config-recommended": "^3.0.0",
+    "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.1.0",
+    "nodemon": "^1.17.5",
+    "parcel-bundler": "^1.9.2",
+    "pre-commit": "^1.2.2",
+    "react-testing-library": "^4.0.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|styl|sass|scss)$": "<rootDir>/client/__mocks__/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/client/__mocks__/fileMock.js"
+    }
+  }
+}

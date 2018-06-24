@@ -15,7 +15,8 @@ npm i
 
 #### Available scripts: 
 
-`npm run build` - builds the React App
+Build the React app:
+`npm run build` 
 
 To run locally you will need to run the server and client concurrently in separate terminal windows with these two scripts: 
 
@@ -24,6 +25,7 @@ npm run start:server
 npm run start:client
 ```
 
+Testing:
 ```
 npm test
 npm run test:watch
